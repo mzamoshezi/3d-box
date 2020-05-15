@@ -1,0 +1,132 @@
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 100px 0;
+}
+
+/***********************************************************************************************************************
+                                                    NAVBAR STYLES
+***********************************************************************************************************************/
+.navbar {
+  transition: all 0.4s;
+}
+
+.navbar .nav-link {
+  color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+}
+
+/* Change navbar styling on scroll */
+.navbar.active {
+  background: #fff;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+  color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+  color: #555;
+  text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+  color: #555;
+}
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991px) {
+  .navbar {
+    background: #fff;
+  }
+
+  .navbar .navbar-brand,
+  .navbar .nav-link {
+    color: #555;
+  }
+}
+
+/* Nav hover effect */
+.nav-hover-effect {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-hover-effect::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.nav-hover-effect:hover::after {
+  width: 100%;
+}
+
+/***********************************************************************************************************************
+                                                    HEADER STYLES
+***********************************************************************************************************************/
+header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/header-img.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+/***********************************************************************************************************************
+                                                  EXPERIENCE STYLES
+***********************************************************************************************************************/
+#experience {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url("../img/experience-img.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.card {
+  width: 70%;
+  border: 0;
+  box-shadow: 0px 10px 20px 5px #00000015;
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: 90vw;
+  }
+}
